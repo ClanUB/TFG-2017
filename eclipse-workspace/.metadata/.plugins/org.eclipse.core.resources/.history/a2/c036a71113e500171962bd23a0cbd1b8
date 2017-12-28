@@ -1,0 +1,174 @@
+from LoadData import loadData
+from randomForest import rf_qual_prediction, rf_rank_prediction
+from binClassifier import bc_qual_prediction, bc_binary_prediction
+from RecUserBased import RecUserBased
+import UtilFunctions
+
+from sklearn.model_selection import KFold
+import pandas as pd
+import numpy as np
+
+#Constantes
+n_splits = 10
+random_state = 0
+kn = 5
+dict_idEns = {"mates": "G1042", "info": "G1077", "low": ""}
+
+#===============================================================================
+# Lanza el menu que muestra opciones de computacion con el Random Forest
+# X: DataFrame, data
+# y: DataFrame, target
+#===============================================================================
+def RF_menuOptions(X, y):
+    leave = False
+    
+    while(not leave):
+        option = input("Selecciona una opcion:\n\
+        1. Ranking mediante prediccion de notas\n\
+        2. Prediccion de ranking\n\
+        3. Aprobado/suspenso mediante prediccion de notas\n\
+        4. Clasificacion binaria de aprobado/suspenso\n\
+        5. Volver\n")
+        
+        if option=="1":
+            rf_qual_prediction(X, y)
+            
+        elif option=="2":
+            rf_rank_prediction(X, y)
+            
+        elif option=="3":
+            bc_qual_prediction(X, y)
+            
+        elif option=="4":
+            bc_binary_prediction(X, y)
+            
+        elif option=="5":
+            leave = True
+            
+        else:
+            print("opcion erronea.")
+
+def rec_submenuOption1(X, y):
+    leave = False
+    
+    while(not leave):
+        print("PREDICCION MEDIANTE RANKING")
+        option = input("Selecciona una opcion:\n1. Eliminacion de los MV\n2. Reemplazo de los MV\n3. Volver\n")
+        
+        if option=="1":
+            print("Elimination case:")
+            df_concat = pd.concat([X, y], axis=1)
+            df_concat.dropna(axis=0, how="any", inplace=True)
+            X_copy = np.round(df_concat.iloc[:, :10], decimals=2)
+            y_copy = np.round(df_concat.iloc[:, 10:20], decimals=2)
+                 
+            #Ranking conversion
+            X_copy = UtilFunctions.score2ranking(X_copy)
+            y_copy = UtilFunctions.score2ranking(y_copy)
+            rec = RecUserBased(kn=kn) #Recomendador basado en usuarios
+             
+            kf = KFold(n_splits=n_splits, random_state=random_state)
+            UtilFunctions.cross_validation(rec, X_copy, y_copy, kf) 
+            
+        elif option=="2":
+            print("Replacement case:")
+            X_copy, y_copy = X.copy(), y.copy() #Hacer la copia, porque la siguiente instruccion modifica el contenido 
+            
+            UtilFunctions.fill_mv(X_copy)
+            X_copy = np.round(X_copy, decimals=2)
+                  
+            UtilFunctions.fill_mv(y_copy)
+            y_copy = np.round(y_copy, decimals=2)
+             
+            #Ranking conversion
+            X_copy = UtilFunctions.score2ranking(X_copy)
+            y_copy = UtilFunctions.score2ranking(y_copy)
+            rec = RecUserBased(kn=kn) #Recomendador basado en usuarios
+              
+            kf = KFold(n_splits=n_splits, random_state=random_state)
+            UtilFunctions.cross_validation(rec, X_copy, y_copy, kf)
+            
+        elif option=="3":
+            leave = True
+            
+        else:
+            print("opcion erronea.")
+
+def rec_submenuOption2(X, y):
+    leave = False
+    
+    while(not leave):
+        print("PREDICCION MEDIANTE CALIFICACIONES")
+        option = input("Selecciona una opcion:\n1. Eliminacion de los MV\n2. Reemplazo de los MV\n3. Mantener los MV\n4. Volver\n")
+        
+        if option=="1":
+            print("Elimination case:")
+            df_concat = pd.concat([X, y], axis=1)
+            df_concat.dropna(axis=0, how="any", inplace=True)
+            X_copy = np.round(df_concat.iloc[:, :10], decimals=2)
+            y_copy = np.round(df_concat.iloc[:, 10:20], decimals=2)
+                 
+            rec = RecUserBased(kn=kn, reverse=True) #Recomendador basado en usuarios
+            kf = KFold(n_splits=n_splits, random_state=random_state)
+            UtilFunctions.cross_validation(rec, X_copy, y_copy, kf, True) 
+            
+        elif option=="2":
+            print("Replacement case:")
+            X_copy, y_copy = X.copy(), y.copy() #Hacer la copia, porque la siguiente instruccion modifica el contenido 
+            
+            UtilFunctions.fill_mv(X_copy)
+            X_copy = np.round(X_copy, decimals=2)
+                  
+            UtilFunctions.fill_mv(y_copy)
+            y_copy = np.round(y_copy, decimals=2)
+             
+            rec = RecUserBased(kn=kn, reverse=True) #Recomendador basado en usuarios
+            kf = KFold(n_splits=n_splits, random_state=random_state)
+            UtilFunctions.cross_validation(rec, X_copy, y_copy, kf, True)
+           
+        elif option=="3":
+            print("Keeping case")
+            rec = RecUserBased(kn=kn, reverse=True) #Recomendador basado en usuarios
+              
+            kf = KFold(n_splits=n_splits, random_state=random_state)
+            UtilFunctions.cross_validation(rec, X, y, kf, True, True)
+            
+        elif option=="4":
+            leave = True
+            
+        else:
+            print("opcion erronea.")
+            
+def rec_menuOptions(X, y):
+    leave = False
+    
+    while(not leave):
+        print("RECOMENDADOR BASADO EN USUARIOS")
+        option = input("Selecciona una opcion:\n1. Prediccion mediante ranking\n2. Prediccion mediante calificaciones\n3. Volver")
+        
+        if option=="1":
+            rec_submenuOption1(X, y)
+            
+        elif option=="2":
+            rec_submenuOption2(X, y)
+            
+        elif option=="3":
+            leave = True
+            
+        else:
+            print("opcion erronea.")
+            
+
+#===============================================================================
+# Funcion principal que prepara todos los datos necesarios, y llama a las demas funciones para ejecutar 
+# diferentes funcionalidades implementadas.
+#===============================================================================
+def main():
+    id_ens = dict_idEns["info"]
+    X, y = loadData(id_ens) #df_year1, df_year2
+    rec_menuOptions(X, y)
+    
+    print("final")
+
+    
+main()

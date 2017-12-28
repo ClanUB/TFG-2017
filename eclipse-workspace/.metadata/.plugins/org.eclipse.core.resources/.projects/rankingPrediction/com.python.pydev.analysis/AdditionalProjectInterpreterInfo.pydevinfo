@@ -1,0 +1,60 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\rankingPrediction\com.python.pydev.analysis\v2_indexcache
+UtilFunctions|1513898218619846000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\UtilFunctions.py
+LoadData|1513898564972642000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\LoadData.py
+Main|1514494687835761000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\Main.py
+RecMvRepl|1513114094823803000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\RecMvRepl.py
+RecUserBased|1513722600853220000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\RecUserBased.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+1=UtilFunctions
+3=LoadData
+8=RecMvRepl.fit
+6=RecUserBased.__init__
+7=RecMvRepl.__init__
+9=RecUserBased.fit
+2=Main
+4=RecMvRepl
+5=RecUserBased
+-- END DICTIONARY
+-- START TREE 1
+19
+com|4|compute_accuracy!10@compute_std!10@compute_accMargin!10@compute_mae!10@
+cro|2|cross_validation!10@cross_validation_RF!10@
+dic|1|dict_idEns!19@
+fil|1|fill_mv!10@
+get|2|getLabel2!26@getQual2process!26@
+kn|1|kn!19@
+loa|1|loadData!26@
+mai|1|main!18@
+map|1|map_asig!26@
+men|1|menuOptions!18@
+n_s|1|n_splits!19@
+ran|1|random_state!19@
+rec|5|rec_submenuOption1!18@rec_submenuOption2!18@rec_menuOptions!18@RecMvRepl!33@RecUserBased!41@
+rf_|1|RF_menuOptions!18@
+s1_|6|s1_info!27@s1_dret_lbl!27@s1_info_lbl!27@s1_mates!27@s1_dret!27@s1_mates_lbl!27@
+s2_|6|s2_dret!27@s2_info_lbl!27@s2_mates_lbl!27@s2_info!27@s2_mates!27@s2_dret_lbl!27@
+s3_|6|s3_dret_lbl!27@s3_mates!27@s3_info!27@s3_info_lbl!27@s3_mates_lbl!27@s3_dret!27@
+sco|1|score2ranking!10@
+sin|1|single_validation!10@
+-- END TREE
+-- START TREE 2
+14
+__i|2|__init__!4&34@__init__!5&42@
+__s|1|__str__!5&42@
+acc|1|accMargin!6&43@
+fit|2|fit!4&34@fit!5&42@
+kn|2|kn!7&35@kn!6&43@
+knn|2|KNN!4&34@KNN!5&42@
+nam|2|name!7&35@name!6&43@
+pre|2|predict!4&34@predict!5&42@
+rec|2|recommend!4&34@recommend!5&42@
+rev|1|reverse!6&43@
+sco|1|score!5&42@
+tra|1|training_set!8&35@
+x_t|1|X_train!9&43@
+y_t|1|y_train!9&43@
+-- END TREE

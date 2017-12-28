@@ -1,0 +1,1555 @@
+!SESSION 2017-12-11 16:04:12.605 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file C:\Users\Orquidea\eclipse-workspace\.metadata\.bak_0.log
+Created Time: 2017-12-14 00:18:10.425
+
+!ENTRY org.python.pydev.shared_core 2 2 2017-12-14 00:18:10.425
+!MESSAGE Warning: computed 10560 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\main.py activationToken:df_concat.T qualifier:il isInCalltip:false alreadyHasParams:false]
+!STACK 0
+java.lang.RuntimeException: Warning: computed 10560 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\main.py activationToken:df_concat.T qualifier:il isInCalltip:false alreadyHasParams:false]
+	at org.python.pydev.core.log.Log.logWarn(Log.java:70)
+	at org.python.pydev.editor.codecompletion.PyCodeCompletion.getCodeCompletionProposals(PyCodeCompletion.java:195)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.getPythonProposals(PythonCompletionProcessor.java:229)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.computeCompletionProposals(PythonCompletionProcessor.java:163)
+	at org.python.pydev.editor.simpleassist.SimpleAssistProcessor.computeCompletionProposals(SimpleAssistProcessor.java:279)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$3.run(ContentAssistant.java:2007)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2004)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:560)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$7(CompletionProposalPopup.java:555)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:489)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:482)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener$1.run(ContentAssistant.java:377)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.python.pydev.shared_core 2 2 2017-12-14 13:41:49.323
+!MESSAGE Warning: computed 14940 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\RecUserBased.py activationToken:student qualifier:na isInCalltip:false alreadyHasParams:false]
+!STACK 0
+java.lang.RuntimeException: Warning: computed 14940 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\RecUserBased.py activationToken:student qualifier:na isInCalltip:false alreadyHasParams:false]
+	at org.python.pydev.core.log.Log.logWarn(Log.java:70)
+	at org.python.pydev.editor.codecompletion.PyCodeCompletion.getCodeCompletionProposals(PyCodeCompletion.java:195)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.getPythonProposals(PythonCompletionProcessor.java:229)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.computeCompletionProposals(PythonCompletionProcessor.java:163)
+	at org.python.pydev.editor.simpleassist.SimpleAssistProcessor.computeCompletionProposals(SimpleAssistProcessor.java:279)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$3.run(ContentAssistant.java:2007)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2004)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:560)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$7(CompletionProposalPopup.java:555)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:489)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:482)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener$1.run(ContentAssistant.java:377)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SESSION 2017-12-19 22:40:39.255 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-12-19 22:40:52.509
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 22:41:21.890
+!MESSAGE Error. returning: 0
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\Orquidea\eclipse-workspace\Practice\RecUserBased.py
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(Unknown Source)
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.readAttributes(Unknown Source)
+	at java.nio.file.Files.readAttributes(Unknown Source)
+	at java.nio.file.Files.getLastModifiedTime(Unknown Source)
+	at org.python.pydev.shared_core.io.FileUtils.lastModified(FileUtils.java:1059)
+	at org.python.pydev.shared_core.io.FileUtils.lastModified(FileUtils.java:1050)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.addInfoToModuleOnRestoreInsertCommand(AbstractAdditionalDependencyInfo.java:525)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.processInsert(AbstractAdditionalInfoWithBuild.java:191)
+	at org.python.pydev.core.DeltaSaver$DeltaInsertCommand.processWith(DeltaSaver.java:97)
+	at org.python.pydev.core.DeltaSaver.processDeltas(DeltaSaver.java:317)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreSavedInfo(AbstractAdditionalInfoWithBuild.java:102)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.loadContentsFromFile(AbstractAdditionalDependencyInfo.java:495)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.load(AbstractAdditionalDependencyInfo.java:410)
+	at com.python.pydev.analysis.additionalinfo.AdditionalProjectInterpreterInfo.getAdditionalInfoForProject(AdditionalProjectInterpreterInfo.java:244)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnableForRemove.removeInfoForModule(AnalysisBuilderRunnableForRemove.java:57)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnableForRemove.<init>(AnalysisBuilderRunnableForRemove.java:41)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnableFactory.createRunnable(AnalysisBuilderRunnableFactory.java:254)
+	at com.python.pydev.analysis.builder.AnalysisBuilderVisitor.visitRemovedResource(AnalysisBuilderVisitor.java:234)
+	at org.python.pydev.builder.PydevGrouperVisitor.visitWith(PydevGrouperVisitor.java:119)
+	at org.python.pydev.builder.PydevGrouperVisitor.visitRemovedResource(PydevGrouperVisitor.java:171)
+	at org.python.pydev.builder.PydevGrouperVisitor.onVisitDelta(PydevGrouperVisitor.java:154)
+	at org.python.pydev.builder.PydevInternalResourceDeltaVisitor.visit(PydevInternalResourceDeltaVisitor.java:94)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.python.pydev.builder.PyDevBuilder.build(PyDevBuilder.java:128)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-12-19 22:41:38.872
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Orquidea'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2017-12-19 22:42:40.371
+!MESSAGE Setup tasks were performed during startup. See 'C:\Users\Orquidea\eclipse\java-oxygen\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 22:48:32.386
+!MESSAGE The python client still hasn't connected back to the eclipse java vm (will retry...)
+!STACK 0
+java.lang.RuntimeException: The python client still hasn't connected back to the eclipse java vm (will retry...)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:334)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.createInnerFromServer(CompiledModule.java:341)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.getGlobalTokens(CompiledModule.java:542)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:856)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:631)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:864)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:631)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:846)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findGlobalTokDef(SourceModule.java:1105)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinitionsFromModAndTok(SourceModule.java:1054)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1036)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:873)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:702)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:185)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:84)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:100)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 22:52:48.957
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitListComp(MakeAstValidForPrettyPrintingVisitor.java:317)
+	at org.python.pydev.parser.jython.ast.ListComp.accept(ListComp.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.jython.ast.Expr.traverse(Expr.java:77)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleSimpleNode(MakeAstValidForPrettyPrintingVisitor.java:898)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitExpr(MakeAstValidForPrettyPrintingVisitor.java:1069)
+	at org.python.pydev.parser.jython.ast.Expr.accept(Expr.java:71)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitClassDef(MakeAstValidForPrettyPrintingVisitor.java:733)
+	at org.python.pydev.parser.jython.ast.ClassDef.accept(ClassDef.java:157)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 22:55:30.481
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIfPart(MakeAstValidForPrettyPrintingVisitor.java:1144)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIf(MakeAstValidForPrettyPrintingVisitor.java:1125)
+	at org.python.pydev.parser.jython.ast.If.accept(If.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitWhile(MakeAstValidForPrettyPrintingVisitor.java:396)
+	at org.python.pydev.parser.jython.ast.While.accept(While.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 23:22:34.776
+!MESSAGE ERROR reading shell. Message sent: [Ljava.lang.String;@25eb5943
+
+ProcessInfo:
+
+ - Executed: C:\Users\Orquidea\Anaconda3\python.exe -u C:\Users\Orquidea\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc\pycompletionserver.py 59894
+
+ - Environment:
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\Orquidea\AppData\Roaming
+COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMONPROGRAMW6432=C:\Program Files\Common Files
+COMPUTERNAME=TIAN
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+FP_NO_HOST_CHECK=NO
+HOMEDRIVE=C:
+HOMEPATH=\Users\Orquidea
+LOCALAPPDATA=C:\Users\Orquidea\AppData\Local
+LOGONSERVER=\\TIAN
+NUMBER_OF_PROCESSORS=4
+ONEDRIVE=C:\Users\Orquidea\OneDrive
+OS=Windows_NT
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\EgisTec MyWinLocker\x64;C:\Program Files (x86)\EgisTec MyWinLocker\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Orquidea\AppData\Local\Microsoft\WindowsApps;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3a09
+PROGRAMDATA=C:\ProgramData
+PROGRAMFILES(X86)=C:\Program Files (x86)
+PROGRAMFILES=C:\Program Files
+PROGRAMW6432=C:\Program Files
+PROMPT=$P$G
+PSMODULEPATH=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\
+PUBLIC=C:\Users\Public
+PYTHONPATH=C:\Users\Orquidea\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc\pydev_sitecustomize;C:\Users\Orquidea\Anaconda3\DLLs;C:\Users\Orquidea\Anaconda3\lib;C:\Users\Orquidea\Anaconda3;C:\Users\Orquidea\Anaconda3\lib\site-packages;C:\Users\Orquidea\Anaconda3\lib\site-packages\Sphinx-1.5.6-py3.6.egg;C:\Users\Orquidea\Anaconda3\lib\site-packages\win32;C:\Users\Orquidea\Anaconda3\lib\site-packages\win32\lib;C:\Users\Orquidea\Anaconda3\lib\site-packages\Pythonwin;C:\Users\Orquidea\Anaconda3\lib\site-packages\setuptools-27.2.0-py3.6.egg
+SESSIONNAME=Console
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\WINDOWS
+TEMP=C:\Users\Orquidea\AppData\Local\Temp
+TMP=C:\Users\Orquidea\AppData\Local\Temp
+USERDOMAIN=TIAN
+USERDOMAIN_ROAMINGPROFILE=TIAN
+USERNAME=Orquidea
+USERPROFILE=C:\Users\Orquidea
+WINDIR=C:\WINDOWS
+
+ - Working Dir:
+C:\Users\Orquidea\eclipse\java-oxygen\eclipse\..\..\..\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc
+
+ - OS:
+Windows 10
+
+ - Std output:
+
+
+ - Err output:
+
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.poll(Unknown Source)
+	at sun.nio.ch.SocketAdaptor$SocketInputStream.read(Unknown Source)
+	at sun.nio.ch.ChannelInputStream.read(Unknown Source)
+	at java.io.InputStream.read(Unknown Source)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:454)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:506)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:692)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getLineCol(AbstractShell.java:776)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.findDefinition(CompiledModule.java:607)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.findDefinition(CompiledModule.java:1)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1018)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:702)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:185)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:84)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:100)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 23:23:19.153
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 23:26:21.769
+!MESSAGE Stopping analysis: completion took too much time to complete. Max set to: 5000 millis. Current: 5380 millis. Note: this value may be changed in the code-completion preferences.
+!STACK 0
+org.python.pydev.core.structure.CompletionRecursionException: Stopping analysis: completion took too much time to complete. Max set to: 5000 millis. Current: 5380 millis. Note: this value may be changed in the code-completion preferences.
+	at org.python.pydev.editor.codecompletion.revisited.CompletionState.checkMaxTimeForCompletion(CompletionState.java:277)
+	at org.python.pydev.editor.codecompletion.revisited.CompletionStateWrapper.checkMaxTimeForCompletion(CompletionStateWrapper.java:93)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:712)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:702)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.findDefinition(CompiledModule.java:651)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.findDefinition(CompiledModule.java:1)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1018)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:702)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:185)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:84)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:100)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-19 23:28:20.586
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/rankingPrediction/loadData.py' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.deleteMarkers(Resource.java:798)
+	at org.python.pydev.builder.pylint.OnlyRemoveMarkersPyLintVisitor.deleteMarkers(OnlyRemoveMarkersPyLintVisitor.java:34)
+	at org.python.pydev.builder.pylint.OnlyRemoveMarkersPyLintVisitor.startVisit(OnlyRemoveMarkersPyLintVisitor.java:43)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnable.doAnalysis(AnalysisBuilderRunnable.java:264)
+	at com.python.pydev.analysis.builder.AbstractAnalysisBuilderRunnable.run(AbstractAnalysisBuilderRunnable.java:162)
+	at org.python.pydev.core.concurrency.RunnableAsJobsPoolThread$1.run(RunnableAsJobsPoolThread.java:140)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-12-19 23:28:20.588
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+
+!ENTRY org.python.pydev.debug 4 4 2017-12-19 23:28:20.625
+!MESSAGE Unexpected getMarkers error (recovered properly)
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/rankingPrediction/loadData.py' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.findMarkers(Resource.java:984)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersAndBreakpointsFromEditorResource(AbstractBreakpointRulerAction.java:275)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getBreakpointsFromCurrentFile(AbstractBreakpointRulerAction.java:194)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getBreakpointFromLastLineOfActivityInCurrentEditor(AbstractBreakpointRulerAction.java:81)
+	at org.python.pydev.debug.ui.actions.PythonBreakpointPropertiesRulerAction.update(PythonBreakpointPropertiesRulerAction.java:84)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.update(AbstractRulerActionDelegate.java:127)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.setActiveEditor(AbstractRulerActionDelegate.java:87)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:71)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:34)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ViewerActionBuilder.createActionDescriptor(ViewerActionBuilder.java:51)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:118)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:140)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:161)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:114)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readViewerContributions(ViewerActionBuilder.java:100)
+	at org.eclipse.ui.internal.PopupMenuExtender.readStaticActionsFor(PopupMenuExtender.java:527)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuId(PopupMenuExtender.java:238)
+	at org.eclipse.ui.internal.PopupMenuExtender.<init>(PopupMenuExtender.java:158)
+	at org.eclipse.ui.internal.PartSite.registerContextMenu(PartSite.java:130)
+	at org.eclipse.ui.internal.EditorSite.registerContextMenu(EditorSite.java:160)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.createPartControl(AbstractTextEditor.java:3436)
+	at org.eclipse.ui.texteditor.StatusTextEditor.createPartControl(StatusTextEditor.java:61)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.createPartControl(AbstractDecoratedTextEditor.java:445)
+	at org.python.pydev.editor.codefolding.PyEditProjection.createPartControl(PyEditProjection.java:80)
+	at org.python.pydev.editor.PyEdit.createPartControl(PyEdit.java:311)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.widgetSelected(StackRenderer.java:1053)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3187)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1870)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:328)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-12-19 23:28:20.626
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+
+!ENTRY org.python.pydev.debug 4 4 2017-12-19 23:28:20.629
+!MESSAGE Unexpected getMarkers error (recovered properly)
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/rankingPrediction/loadData.py' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.findMarkers(Resource.java:984)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersAndBreakpointsFromEditorResource(AbstractBreakpointRulerAction.java:275)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getBreakpointsFromCurrentFile(AbstractBreakpointRulerAction.java:194)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getBreakpointFromLastLineOfActivityInCurrentEditor(AbstractBreakpointRulerAction.java:81)
+	at org.python.pydev.debug.ui.actions.EnableDisableBreakpointRulerAction.update(EnableDisableBreakpointRulerAction.java:35)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.update(AbstractRulerActionDelegate.java:127)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.setActiveEditor(AbstractRulerActionDelegate.java:87)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:71)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:34)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ViewerActionBuilder.createActionDescriptor(ViewerActionBuilder.java:51)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:118)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:140)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:161)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:114)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readViewerContributions(ViewerActionBuilder.java:100)
+	at org.eclipse.ui.internal.PopupMenuExtender.readStaticActionsFor(PopupMenuExtender.java:527)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuId(PopupMenuExtender.java:238)
+	at org.eclipse.ui.internal.PopupMenuExtender.<init>(PopupMenuExtender.java:158)
+	at org.eclipse.ui.internal.PartSite.registerContextMenu(PartSite.java:130)
+	at org.eclipse.ui.internal.EditorSite.registerContextMenu(EditorSite.java:160)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.createPartControl(AbstractTextEditor.java:3436)
+	at org.eclipse.ui.texteditor.StatusTextEditor.createPartControl(StatusTextEditor.java:61)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.createPartControl(AbstractDecoratedTextEditor.java:445)
+	at org.python.pydev.editor.codefolding.PyEditProjection.createPartControl(PyEditProjection.java:80)
+	at org.python.pydev.editor.PyEdit.createPartControl(PyEdit.java:311)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.widgetSelected(StackRenderer.java:1053)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3187)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1870)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:328)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-12-19 23:28:20.630
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+
+!ENTRY org.python.pydev.debug 4 4 2017-12-19 23:28:20.633
+!MESSAGE Unexpected getMarkers error (recovered properly)
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/rankingPrediction/loadData.py' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.findMarkers(Resource.java:984)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersAndBreakpointsFromEditorResource(AbstractBreakpointRulerAction.java:275)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersFromEditorResource(AbstractBreakpointRulerAction.java:229)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersFromCurrentFile(AbstractBreakpointRulerAction.java:222)
+	at org.python.pydev.debug.ui.actions.PyBreakpointRulerAction.update(PyBreakpointRulerAction.java:76)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.update(AbstractRulerActionDelegate.java:127)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.setActiveEditor(AbstractRulerActionDelegate.java:87)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:71)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:34)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ViewerActionBuilder.createActionDescriptor(ViewerActionBuilder.java:51)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:118)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readElement(ViewerActionBuilder.java:82)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:129)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:140)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:161)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:114)
+	at org.eclipse.ui.internal.ViewerActionBuilder.readViewerContributions(ViewerActionBuilder.java:100)
+	at org.eclipse.ui.internal.PopupMenuExtender.readStaticActionsFor(PopupMenuExtender.java:527)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuId(PopupMenuExtender.java:238)
+	at org.eclipse.ui.internal.PopupMenuExtender.<init>(PopupMenuExtender.java:158)
+	at org.eclipse.ui.internal.PartSite.registerContextMenu(PartSite.java:130)
+	at org.eclipse.ui.internal.EditorSite.registerContextMenu(EditorSite.java:160)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.createPartControl(AbstractTextEditor.java:3436)
+	at org.eclipse.ui.texteditor.StatusTextEditor.createPartControl(StatusTextEditor.java:61)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.createPartControl(AbstractDecoratedTextEditor.java:445)
+	at org.python.pydev.editor.codefolding.PyEditProjection.createPartControl(PyEditProjection.java:80)
+	at org.python.pydev.editor.PyEdit.createPartControl(PyEdit.java:311)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.widgetSelected(StackRenderer.java:1053)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3187)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1870)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:328)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-12-19 23:28:20.633
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+
+!ENTRY org.python.pydev.debug 4 4 2017-12-19 23:28:20.740
+!MESSAGE Unexpected getMarkers error (recovered properly)
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/rankingPrediction/loadData.py' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.findMarkers(Resource.java:984)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersAndBreakpointsFromEditorResource(AbstractBreakpointRulerAction.java:275)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersFromEditorResource(AbstractBreakpointRulerAction.java:229)
+	at org.python.pydev.debug.ui.actions.AbstractBreakpointRulerAction.getMarkersFromCurrentFile(AbstractBreakpointRulerAction.java:222)
+	at org.python.pydev.debug.ui.actions.PyBreakpointRulerAction.update(PyBreakpointRulerAction.java:76)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.update(AbstractRulerActionDelegate.java:127)
+	at org.eclipse.ui.texteditor.AbstractRulerActionDelegate.setActiveEditor(AbstractRulerActionDelegate.java:87)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:71)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:80)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:129)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:344)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:311)
+	at org.eclipse.ui.internal.WorkbenchPage.access$18(WorkbenchPage.java:293)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:211)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$3.run(PartServiceImpl.java:250)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:247)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:756)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:95)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.widgetSelected(StackRenderer.java:1057)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3187)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1870)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:328)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-12-19 23:28:20.740
+!MESSAGE Resource '/rankingPrediction/loadData.py' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 00:09:20.538
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitListComp(MakeAstValidForPrettyPrintingVisitor.java:317)
+	at org.python.pydev.parser.jython.ast.ListComp.accept(ListComp.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.jython.ast.Expr.traverse(Expr.java:77)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleSimpleNode(MakeAstValidForPrettyPrintingVisitor.java:898)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitExpr(MakeAstValidForPrettyPrintingVisitor.java:1069)
+	at org.python.pydev.parser.jython.ast.Expr.accept(Expr.java:71)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitClassDef(MakeAstValidForPrettyPrintingVisitor.java:733)
+	at org.python.pydev.parser.jython.ast.ClassDef.accept(ClassDef.java:157)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 00:15:08.008
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:181)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFor(MakeAstValidForPrettyPrintingVisitor.java:458)
+	at org.python.pydev.parser.jython.ast.For.accept(For.java:112)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitOrElsePart(MakeAstValidForPrettyPrintingVisitor.java:513)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIfPart(MakeAstValidForPrettyPrintingVisitor.java:1177)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIf(MakeAstValidForPrettyPrintingVisitor.java:1125)
+	at org.python.pydev.parser.jython.ast.If.accept(If.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 00:15:59.440
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-12-20 00:26:41.678
+!MESSAGE No existing console history at: C:\Users\Orquidea\eclipse-workspace\.metadata\.plugins\org.python.pydev.shared_interactive_console\history.py
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Orquidea\eclipse-workspace\.metadata\.plugins\org.python.pydev.shared_interactive_console\history.py (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.load(ScriptConsoleGlobalHistory.java:96)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.<init>(ScriptConsoleGlobalHistory.java:45)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.<clinit>(ScriptConsoleGlobalHistory.java:37)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleHistory.<init>(ScriptConsoleHistory.java:56)
+	at org.python.pydev.shared_interactive_console.console.ui.ScriptConsole.<init>(ScriptConsole.java:204)
+	at org.python.pydev.debug.newconsole.PydevConsole.<init>(PydevConsole.java:84)
+	at org.python.pydev.debug.newconsole.PydevDebugConsole.<init>(PydevDebugConsole.java:29)
+	at org.python.pydev.debug.newconsole.PydevConsoleFactory.createDebugConsole(PydevConsoleFactory.java:284)
+	at org.python.pydev.debug.newconsole.PydevConsoleFactory.createDebugConsole(PydevConsoleFactory.java:259)
+	at org.python.pydev.debug.console.PromptOverlay.<init>(PromptOverlay.java:77)
+	at org.python.pydev.debug.console.PromptOverlayConsolePageParticipant.init(PromptOverlayConsolePageParticipant.java:48)
+	at org.eclipse.ui.internal.console.ConsoleView$3.run(ConsoleView.java:326)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.console.ConsoleView.doCreatePage(ConsoleView.java:323)
+	at org.eclipse.ui.part.PageBookView.createPage(PageBookView.java:385)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:728)
+	at org.eclipse.ui.internal.console.ConsoleView$4.run(ConsoleView.java:395)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.python.pydev.shared_core 2 2 2017-12-20 12:36:38.875
+!MESSAGE Warning: computed 50047 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\randomForest.py activationToken:y_test qualifier:in isInCalltip:false alreadyHasParams:false]
+!STACK 0
+java.lang.RuntimeException: Warning: computed 50047 completions (trimming to 10000).
+Request: CompletionRequest[ editorFile:C:\Users\Orquidea\eclipse-workspace\rankingPrediction\randomForest.py activationToken:y_test qualifier:in isInCalltip:false alreadyHasParams:false]
+	at org.python.pydev.core.log.Log.logWarn(Log.java:70)
+	at org.python.pydev.editor.codecompletion.PyCodeCompletion.getCodeCompletionProposals(PyCodeCompletion.java:195)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.getPythonProposals(PythonCompletionProcessor.java:229)
+	at org.python.pydev.editor.codecompletion.PythonCompletionProcessor.computeCompletionProposals(PythonCompletionProcessor.java:163)
+	at org.python.pydev.editor.simpleassist.SimpleAssistProcessor.computeCompletionProposals(SimpleAssistProcessor.java:279)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$3.run(ContentAssistant.java:2007)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2004)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:560)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$7(CompletionProposalPopup.java:555)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:489)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:482)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener$1.run(ContentAssistant.java:377)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 12:56:42.722
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIfPart(MakeAstValidForPrettyPrintingVisitor.java:1144)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitIf(MakeAstValidForPrettyPrintingVisitor.java:1125)
+	at org.python.pydev.parser.jython.ast.If.accept(If.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitWhile(MakeAstValidForPrettyPrintingVisitor.java:396)
+	at org.python.pydev.parser.jython.ast.While.accept(While.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 12:59:46.827
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 13:09:49.314
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 13:12:57.731
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 13:12:59.558
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 13:37:29.038
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-20 16:25:40.846
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-21 00:43:21.041
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-21 20:13:19.065
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-21 20:15:30.443
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Index[value=Name[id=k, ctx=Load, reserved=false]]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitListComp(MakeAstValidForPrettyPrintingVisitor.java:317)
+	at org.python.pydev.parser.jython.ast.ListComp.accept(ListComp.java:96)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.jython.ast.Expr.traverse(Expr.java:77)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleSimpleNode(MakeAstValidForPrettyPrintingVisitor.java:898)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitExpr(MakeAstValidForPrettyPrintingVisitor.java:1069)
+	at org.python.pydev.parser.jython.ast.Expr.accept(Expr.java:71)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitFunctionDef(MakeAstValidForPrettyPrintingVisitor.java:873)
+	at org.python.pydev.parser.jython.ast.FunctionDef.accept(FunctionDef.java:131)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitClassDef(MakeAstValidForPrettyPrintingVisitor.java:733)
+	at org.python.pydev.parser.jython.ast.ClassDef.accept(ClassDef.java:157)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-23 00:44:50.326
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=Num[n=10, type=Int, num=10], upper=Num[n=20, type=Int, num=20], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-23 00:44:50.574
+!MESSAGE Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+!STACK 0
+java.lang.RuntimeException: Unhandled: ExtSlice[dims=[Slice[lower=null, upper=null, step=null], Slice[lower=null, upper=Num[n=10, type=Int, num=10], step=null]]]
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.unhandled_node(MakeAstValidForPrettyPrintingVisitor.java:106)
+	at org.python.pydev.parser.jython.ast.VisitorBase.visitExtSlice(VisitorBase.java:351)
+	at org.python.pydev.parser.jython.ast.ExtSlice.accept(ExtSlice.java:80)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitSubscript(MakeAstValidForPrettyPrintingVisitor.java:944)
+	at org.python.pydev.parser.jython.ast.Subscript.accept(Subscript.java:87)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.handleArguments(MakeAstValidForPrettyPrintingVisitor.java:1078)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitCall(MakeAstValidForPrettyPrintingVisitor.java:623)
+	at org.python.pydev.parser.jython.ast.Call.accept(Call.java:123)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.visitAssign(MakeAstValidForPrettyPrintingVisitor.java:185)
+	at org.python.pydev.parser.jython.ast.Assign.accept(Assign.java:97)
+	at org.python.pydev.parser.prettyprinterv2.MakeAstValidForPrettyPrintingVisitor.makeValid(MakeAstValidForPrettyPrintingVisitor.java:172)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:132)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SESSION 2017-12-28 21:33:02.793 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:35.503
+!MESSAGE The python client still hasn't connected back to the eclipse java vm (will retry...)
+!STACK 0
+java.lang.RuntimeException: The python client still hasn't connected back to the eclipse java vm (will retry...)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:334)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:41.437
+!MESSAGE Attempt: 2 of 5 failed, trying again...(socket connected: still null)
+!STACK 0
+java.lang.RuntimeException: Attempt: 2 of 5 failed, trying again...(socket connected: still null)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:353)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:47.438
+!MESSAGE Attempt: 3 of 5 failed, trying again...(socket connected: still null)
+!STACK 0
+java.lang.RuntimeException: Attempt: 3 of 5 failed, trying again...(socket connected: still null)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:353)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:53.556
+!MESSAGE Attempt: 4 of 5 failed, trying again...(socket connected: still null)
+!STACK 0
+java.lang.RuntimeException: Attempt: 4 of 5 failed, trying again...(socket connected: still null)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:353)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:59.985
+!MESSAGE The python client still hasn't connected back to the eclipse java vm (will retry...)
+!STACK 0
+java.lang.RuntimeException: The python client still hasn't connected back to the eclipse java vm (will retry...)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:334)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:39:59.986
+!MESSAGE Attempt: 5 of 5 failed, trying again...(socket connected: still null)
+!STACK 0
+java.lang.RuntimeException: Attempt: 5 of 5 failed, trying again...(socket connected: still null)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:353)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-12-28 21:40:15.488
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Orquidea'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 21:41:18.413
+!MESSAGE ERROR reading shell. Message sent: [Ljava.lang.String;@31919919
+
+ProcessInfo:
+
+ - Executed: C:\Users\Orquidea\Anaconda3\python.exe -u C:\Users\Orquidea\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc\pycompletionserver.py 51293
+
+ - Environment:
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\Orquidea\AppData\Roaming
+COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMONPROGRAMW6432=C:\Program Files\Common Files
+COMPUTERNAME=TIAN
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+FP_NO_HOST_CHECK=NO
+HOMEDRIVE=C:
+HOMEPATH=\Users\Orquidea
+LOCALAPPDATA=C:\Users\Orquidea\AppData\Local
+LOGONSERVER=\\TIAN
+NUMBER_OF_PROCESSORS=4
+ONEDRIVE=C:\Users\Orquidea\OneDrive
+OS=Windows_NT
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\EgisTec MyWinLocker\x64;C:\Program Files (x86)\EgisTec MyWinLocker\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Orquidea\AppData\Local\Microsoft\WindowsApps;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3a09
+PROGRAMDATA=C:\ProgramData
+PROGRAMFILES(X86)=C:\Program Files (x86)
+PROGRAMFILES=C:\Program Files
+PROGRAMW6432=C:\Program Files
+PROMPT=$P$G
+PSMODULEPATH=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\
+PUBLIC=C:\Users\Public
+PYTHONPATH=C:\Users\Orquidea\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc\pydev_sitecustomize;C:\Users\Orquidea\Anaconda3\DLLs;C:\Users\Orquidea\Anaconda3\lib;C:\Users\Orquidea\Anaconda3;C:\Users\Orquidea\Anaconda3\lib\site-packages;C:\Users\Orquidea\Anaconda3\lib\site-packages\Sphinx-1.5.6-py3.6.egg;C:\Users\Orquidea\Anaconda3\lib\site-packages\win32;C:\Users\Orquidea\Anaconda3\lib\site-packages\win32\lib;C:\Users\Orquidea\Anaconda3\lib\site-packages\Pythonwin;C:\Users\Orquidea\Anaconda3\lib\site-packages\setuptools-27.2.0-py3.6.egg
+SESSIONNAME=Console
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\WINDOWS
+TEMP=C:\Users\Orquidea\AppData\Local\Temp
+TMP=C:\Users\Orquidea\AppData\Local\Temp
+USERDOMAIN=TIAN
+USERDOMAIN_ROAMINGPROFILE=TIAN
+USERNAME=Orquidea
+USERPROFILE=C:\Users\Orquidea
+WINDIR=C:\WINDOWS
+
+ - Working Dir:
+C:\Users\Orquidea\eclipse\java-oxygen\eclipse\..\..\..\.p2\pool\plugins\org.python.pydev_6.0.0.201709191431\pysrc
+
+ - OS:
+Windows 10
+
+ - Std output:
+
+
+ - Err output:
+
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at java.nio.channels.Channels.writeFullyImpl(Unknown Source)
+	at java.nio.channels.Channels.writeFully(Unknown Source)
+	at java.nio.channels.Channels.access$000(Unknown Source)
+	at java.nio.channels.Channels$1.write(Unknown Source)
+	at java.io.OutputStream.write(Unknown Source)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.write(AbstractShell.java:544)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:691)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getImportCompletions(AbstractShell.java:756)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.createInnerFromServer(CompiledModule.java:342)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.getGlobalTokens(CompiledModule.java:542)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:856)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:631)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:864)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.PyCodeCompletion.doTokenCompletion(PyCodeCompletion.java:665)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionFromFuncDefReturn(AbstractASTManager.java:218)
+	at org.python.pydev.editor.codecompletion.revisited.AssignAnalysis.getAssignCompletions(AssignAnalysis.java:109)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getAssignCompletions(AbstractASTManager.java:1625)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:919)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.PyCodeCompletion.doTokenCompletion(PyCodeCompletion.java:665)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionFromFuncDefReturn(AbstractASTManager.java:218)
+	at org.python.pydev.editor.codecompletion.revisited.AssignAnalysis.getAssignCompletions(AssignAnalysis.java:109)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getAssignCompletions(AbstractASTManager.java:1625)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:919)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:631)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.findTokensOnImportedMods(AbstractASTManager.java:2009)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:820)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:631)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:846)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:681)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:650)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:641)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findGlobalTokDef(SourceModule.java:1105)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinitionsFromModAndTok(SourceModule.java:1054)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1036)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:873)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:702)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:185)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:84)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:100)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:141)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SESSION 2017-12-28 22:27:25.735 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-12-28 22:27:38.198
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 22:27:48.822
+!MESSAGE Error. returning: 0
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\Orquidea\eclipse-workspace\rankingPrediction\Main.py
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(Unknown Source)
+	at sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.readAttributes(Unknown Source)
+	at java.nio.file.Files.readAttributes(Unknown Source)
+	at java.nio.file.Files.getLastModifiedTime(Unknown Source)
+	at org.python.pydev.shared_core.io.FileUtils.lastModified(FileUtils.java:1059)
+	at org.python.pydev.shared_core.io.FileUtils.lastModified(FileUtils.java:1050)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.addInfoToModuleOnRestoreInsertCommand(AbstractAdditionalDependencyInfo.java:525)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.processInsert(AbstractAdditionalInfoWithBuild.java:191)
+	at org.python.pydev.core.DeltaSaver$DeltaInsertCommand.processWith(DeltaSaver.java:97)
+	at org.python.pydev.core.DeltaSaver.processDeltas(DeltaSaver.java:317)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreSavedInfo(AbstractAdditionalInfoWithBuild.java:102)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.loadContentsFromFile(AbstractAdditionalDependencyInfo.java:495)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.load(AbstractAdditionalDependencyInfo.java:410)
+	at com.python.pydev.analysis.additionalinfo.AdditionalProjectInterpreterInfo.getAdditionalInfoForProject(AdditionalProjectInterpreterInfo.java:244)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnable.<init>(AnalysisBuilderRunnable.java:143)
+	at com.python.pydev.analysis.builder.AnalysisBuilderRunnableFactory.createRunnable(AnalysisBuilderRunnableFactory.java:222)
+	at com.python.pydev.analysis.builder.AnalysisBuilderVisitor.doVisitChangedResource(AnalysisBuilderVisitor.java:180)
+	at com.python.pydev.analysis.builder.AnalysisParserObserver.analyze(AnalysisParserObserver.java:175)
+	at com.python.pydev.analysis.builder.AnalysisParserObserver.access$0(AnalysisParserObserver.java:144)
+	at com.python.pydev.analysis.builder.AnalysisParserObserver$AnalyzeLaterJob.run(AnalysisParserObserver.java:77)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-12-28 22:27:52.840
+!MESSAGE The python client still hasn't connected back to the eclipse java vm (will retry...)
+!STACK 0
+java.lang.RuntimeException: The python client still hasn't connected back to the eclipse java vm (will retry...)
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.startIt(AbstractShell.java:334)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:232)
+	at org.python.pydev.editor.codecompletion.shell.ShellsContainer.getServerShell(ShellsContainer.java:165)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getServerShell(AbstractShell.java:222)
+	at org.python.pydev.editor.PyEdit$2.run(PyEdit.java:560)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-12-28 22:27:54.468
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Orquidea'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

@@ -1,0 +1,199 @@
+from sklearn.base import BaseEstimator
+import pandas as pd
+import numpy as np
+from operator import itemgetter
+from sklearn.metrics import mean_absolute_error
+import statistics
+from scipy.stats import pearsonr
+from utilFunctions import score2ranking
+
+class RecUserBased(BaseEstimator):
+    def __init__(self, name="User Based", kn=5, reverse=False, accMargin=2):
+        self.name = name
+        self.kn = kn
+        self.reverse = reverse
+        self.accMargin = accMargin
+        
+    
+    def __str__(self):
+        s = "name: "+self.name + "\tk neighbours: "+str(self.kn) + "\talpha: "+str(self.alpha) + "\taccMargin: "+str(self.accMargin)
+        return s
+        
+        
+    def fit(self, X_train, y_train):
+        self.X_train = X_train
+        self.y_train = y_train
+        
+    
+    def KNN(self, student):
+        neighbours = {}
+        n = len(self.X_train)
+         
+        for i in range(n):
+            stuCompare = self.X_train.iloc[i]
+
+            df_concat = pd.concat([student, stuCompare], axis=1)
+            df_concat.dropna(how="any", inplace=True)
+            
+            if (len(df_concat)>=5):
+                s1 = df_concat[df_concat.columns[0]]
+                s2 = df_concat[df_concat.columns[1]]
+                
+                p = pearsonr(s1, s2)[0]
+                if (not np.isnan(p)):
+                    neighbours[i] = round(float(p), 4)
+        
+        if (len(neighbours)<self.kn):
+            kn = len(neighbours)
+        else:
+            kn = self.kn
+        list_knn = sorted(neighbours.items(), key=itemgetter(1), reverse = True)[:kn]
+        return list_knn    
+    
+    
+    def recommend(self, student):
+        y_subjects = self.y_train.columns #class labels
+        list_knn = self.KNN(student)
+        
+        prediction = pd.Series([0.0]*len(y_subjects), index=y_subjects) #Inicializacion del resultado
+        
+        for subject in y_subjects:
+            sum_p = 0
+            sum_weighing = 0
+            for i, p in list_knn:
+                sim_stu_y = self.y_train.iloc[i]
+                sum_p += p
+                sum_weighing += p*sim_stu_y[subject]
+            
+            rank_score = sum_weighing / sum_p
+            prediction[subject] = rank_score
+        
+        return prediction
+    
+    
+    #===========================================================================
+    # Predecir el ranking de las asignaturas para varios alumnos o un solo alumno
+    # X_test: DataFrame(varios alumnos) or Series(un solo alumno) 
+    # 
+    # df_pred: resultado de predicciones tipo DataFrame or
+    # pred: resultado de prediccion unitaria tipo Series
+    #===========================================================================
+    def predict(self, X_test):
+        if type(X_test) == type(pd.DataFrame()):
+            predictions = []
+            
+            for studentId in X_test.index:
+                stud_row = X_test.loc[studentId]
+                pred = self.recommend(stud_row) #Predecir via recomendacion
+                
+                predictions.append(pred)
+            
+            df_pred = pd.DataFrame(predictions, index=X_test.index)
+            df_pred_r = score2ranking(df_pred, reverse=self.reverse)
+            return df_pred_r 
+        
+        else:
+            pred = self.recommend(X_test)
+            df_pred = pd.DataFrame(pred, index=X_test.index)
+            df_pred_r = score2ranking(df_pred, reverse=self.reverse)
+            return df_pred_r
+        
+
+    def score(self, X_test, y_test):
+        y_pred = self.predict(X_test)
+        df_error = abs(y_pred-y_test)
+        error = df_error.sum().sum() / float(df_error.shape[0] * df_error.shape[1])
+        return error
+    
+        
+    #===========================================================================
+    # #===========================================================================
+    # # Hacer la estimacion del ranking de las diez asignaturas del segundo anio del alumno que se testea
+    # # student: Series, el alumno a testear
+    # # 
+    # # prediction: Series, el resultado de estimacion
+    # #===========================================================================
+    # def recommend(self, student):
+    #     y_subjects = self.y_train.columns #class labels
+    #     list_knn = self.KNN(student)
+    #     list_accs = self.getListAccs(student, list_knn)
+    #     
+    #     prediction = pd.Series([0]*len(y_subjects), index=y_subjects) #Inicializacion del resultado
+    #     median_list = []
+    #     
+    #     for subject in y_subjects:
+    #         weighted_ranks = []
+    #         #Estimar la puntuacion del ranking de la asignatura ponderando los k vecinos mas cercanos
+    #         for i, acc_score in list_accs:
+    #             sim_stu_y = self.y_train.iloc[i]
+    #             rank = sim_stu_y[subject]
+    #             if (acc_score==0): #Evitar que la lista de weighted_ranks sea vacia
+    #                 acc_score = 1
+    #             weighted_ranks += [rank]*acc_score #Ponderar el ranking
+    #         
+    #         median = statistics.median(weighted_ranks)
+    #         median_list.append((subject, median))
+    #         
+    #     rank_list = range(1, len(y_subjects)+1)
+    #     sorted_medians = sorted(median_list, key=itemgetter(1), reverse=False)
+    #     
+    #     for i in range(len(y_subjects)): #Determinar el ranking segun el valor de la mediana obtenida de cada asignatura.
+    #         subject = sorted_medians[i][0]
+    #         rank = rank_list[i]
+    #         prediction[subject] = rank
+    #     
+    #     return prediction
+    #===========================================================================
+    
+    
+    #===============================================================================
+    #     #===========================================================================
+    #     # Obtener los k vecinos con mayor puntuacion de similitud, haciendo recorrido en la muestra entrenada.
+    #     # student: Series, el alumno a testear
+    #     # 
+    #     # list_accs: List, lista de k vecinos con mayor puntuacion de similitud
+    #     #===========================================================================
+    #     def KNN(self, student):
+    #         neighbours = {}
+    #         n = len(self.X_train)
+    #          
+    #         for i in range(n):
+    #             stuCompare = self.X_train.iloc[i]
+    # 
+    #             mae = mean_absolute_error(student, stuCompare) #Medida de similitud, 0.0 es la mejor puntuacion
+    #             neighbours[i] = mae
+    #                 
+    #         list_knn = sorted(neighbours.items(), key=itemgetter(1), reverse = False)[:self.kn]
+    #         list_knn =[x[0] for x in list_knn]
+    #         return list_knn
+    #===============================================================================
+
+    #===========================================================================
+    # #===========================================================================
+    # # Calcular la certeza de dos vectores, si la diferencia esta dentro del margen, es un acierto
+    # # v1: array-like
+    # # v2: array-like
+    # # 
+    # # acc: int, puntuacion de certeza
+    # #===========================================================================
+    # def acc_score_margin(self, v1, v2):
+    #     diff = abs(v1 - v2)
+    #     acc = (diff<=self.accMargin).sum()
+    #     
+    #     return acc
+    #===========================================================================
+    
+    
+    #===========================================================================
+    # def getListAccs(self, student, list_knn):
+    #     list_accs = []
+    #     for j in range(self.kn):
+    #         knn_j = self.X_train.iloc[list_knn[j]]
+    #         acc = self.acc_score_margin(student, knn_j)
+    #         
+    #         acc_tuple = (list_knn[j], acc)
+    #         list_accs.append(acc_tuple)
+    #         
+    #     return list_accs
+    #===========================================================================
+        

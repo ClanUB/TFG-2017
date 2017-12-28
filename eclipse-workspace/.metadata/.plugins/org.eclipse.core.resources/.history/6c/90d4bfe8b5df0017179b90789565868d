@@ -1,0 +1,152 @@
+import os
+import numpy as np
+import pandas as pd
+
+#Listas del mapeo id_asig con su etiqueta
+s1_info = [364288, 364289, 364290, 364291, 364292, 364293, 364294, 364298, 364299, 364301]
+s1_info_lbl = ['P1', 'DDB', 'IO', 'ALGE', 'CAL', 'MD', 'FIS', 'ALGO', 'P2', 'ED']
+
+s2_info = [364297, 364300, 364303, 364305, 364302, 364296, 364295, 364306, 364304, 364307]
+s2_info_lbl = ['ELEC', 'AA', 'DS', 'EC', 'ICC', 'EMP', 'PIE', 'PAE', 'PIS', 'SO1']
+
+s3_info = [364314, 364308, 364322, 364315, 364309, 364311, 364323, 364328, 364310, 364312]
+s3_info_lbl = ['IA', 'SO2', 'TNUI', 'VA', 'XAR', 'BD', 'FHIC', 'GiVD', 'LIL', 'SWD']
+
+s1_mates = [360142, 360140, 360136, 360138, 360134, 360135, 360139, 360143, 360137, 360141]
+s1_mates_lbl = ['ADIP', 'ELPR', 'IACD', 'LIRM', 'MAVE', 'ALLI', 'ARIT', 'FISI', 'IACI', 'PRCI']
+
+s2_mates = [360144, 360148, 360151, 360150, 360146, 360145, 360152, 360161, 360153, 360155]
+s2_mates_lbl = ['CDDV', 'ESAL', 'GELI', 'GRAF', 'MNU1', 'CIDV', 'GEPR', 'HIMA', 'MMSD', 'TOPO']
+
+s3_mates = [360158, 360149, 360156, 360147, 360162, 360159, 360154, 360163, 360160, 360157]
+s3_mates_lbl = ['ANMA', 'EQAL', 'GDCS', 'MNU2', 'PROB', 'ANCO', 'EQDI', 'ESTA', 'MODE', 'TGGS']
+
+s1_dret = [362441, 362442, 362444, 362451, 362446, 362443, 362452, 362449, 362450, 362447] 
+s1_dret_lbl = ['TTC', 'CP', 'FDD', 'DRO', 'PIC', 'EC', 'SDL', 'FDPTD', 'HD', 'DCP']
+
+s2_dret = [362448, 362453, 362454, 362456, 362459, 362461, 362469, 362458]
+s2_dret_lbl = ['OTE', 'PD', 'DOC', 'DIC', 'DFT', 'FDA', 'DPC', 'IDCE']
+
+s3_dret = [362507, 362460, 362462, 362466, 362465, 362470, 362467, 362463]
+s3_dret_lbl = ['DR', 'PST', 'CAA', 'DEM', 'DTS', 'DPP', 'DS', 'BPU']
+    
+#===============================================================================
+# La funcion carga los datos academicos de estudiantes:
+# grado de matematicas, grado de informatica, grado de derecho
+# las notas de los primeros tres años
+# se extraen datos desde un fichero csv
+#
+# id_ens (str): id de la enseñanza de la cual se procesan los datos
+#===============================================================================
+def loadData(id_ens):
+    os.chdir("C:/Users/Orquidea/OneDrive/TFG-2017/pid-UB-master") #cambiar la ruta a la que se encuentra los datos
+
+    qual = pd.read_csv("qualifications_mates_info.csv", na_values = np.nan)
+    qual = qual.drop(qual.columns[0], axis=1) #eliminar los indices
+    
+    data = {}
+    id_enseny1 = "G1042" #id enseñanza de mates
+    data[id_enseny1] = qual
+    
+    id_enseny2 = "G1077" #id enseñanza de informatica
+    data[id_enseny2] = qual
+    
+    qual2process = getQual2process(id_ens, data)
+    
+    #===========================================================================
+    # if id_ens == 'G1055':
+    #     qual2process['nota'] = getMarks(qual2process)
+    #     del qual2process['nota_primera_conv']
+    #     del qual2process['nota_segona_conv']
+    #===========================================================================
+    
+    #Filtracion entre los registros de mates y info
+    filtered_qual = qual2process[qual2process['id_enseny'] == id_ens]
+    
+    if id_ens == "G1077":
+        lbl1 = s1_info_lbl
+        lbl2 = s2_info_lbl
+        
+    if id_ens == "G1042":
+        lbl1 = s1_mates_lbl
+        lbl2 = s2_mates_lbl
+    
+    pivot_year1 = pd.pivot_table(filtered_qual, values = 'nota', index = 'id_alumne', columns='id_assig')[lbl1]
+    pivot_year2 = pd.pivot_table(filtered_qual, values = 'nota', index = 'id_alumne', columns='id_assig')[lbl2]
+    
+    #===========================================================================
+    # #Concatenar los dataframes de cualificaciones del primer y segundo año
+    # #Eliminar los registros que tengan mas de 11 valores NaN
+    # #Sacar los indices de los registros cuyas sumas de las cualificaciones del segundo año sean 0.
+    # #Eliminar los registros segun index_sum0
+    # pivot_conc = pd.concat([pivot_year1, pivot_year2], axis = 1)
+    # pivot_conc.dropna(thresh = 11, inplace = True)
+    # index_sum0 = pivot_conc[pivot_conc.iloc[:,10:].sum(axis = 1) == 0].index
+    # pivot_conc.drop(index_sum0, inplace=True)
+    #===========================================================================
+    
+    index_nan_1 = pivot_year1[pivot_year1.isnull().sum(axis=1)>5].index
+    index_nan_2 = pivot_year2[pivot_year2.isnull().sum(axis=1)>5].index
+    index_nan = list(set(index_nan_1)|set(index_nan_2))
+    
+    #===========================================================================
+    # index_sum0_1 = pivot_year1[pivot_year1.sum(axis=1)==0].index
+    # index_sum0_2 = pivot_year2[pivot_year2.sum(axis=1)==0].index
+    # index_sum0 = list(set(index_sum0_1)|set(index_sum0_2))
+    #===========================================================================
+    
+    index_m10_1 = pivot_year1[pivot_year1.sum(axis=1)<10].index
+    index_m10_2 = pivot_year2[pivot_year2.sum(axis=1)<10].index
+    index_m10 = list(set(index_m10_1)|set(index_m10_2))
+    
+    index_del = list(set(index_nan)|set(index_m10))
+    pivot_conc = pd.concat([pivot_year1, pivot_year2], axis = 1)
+    pivot_conc.drop(index_del, inplace=True)
+    
+    df_year1 = np.round(pivot_conc.iloc[:,:10], decimals=2)
+    df_year2 = np.round(pivot_conc.iloc[:,10:20], decimals=2)
+    return df_year1, df_year2
+    
+
+#===============================================================================
+# mapear el id de asignatura con su etiqueta
+#
+# Retorna el resultado del mapping (id_asig : etiqueta)
+#===============================================================================
+def map_asig():
+    idAssig = np.concatenate((s1_info,s2_info,s3_info,s1_mates,s2_mates,s3_mates,s1_dret,s2_dret,s3_dret), axis=0)
+    descAssig = np.concatenate((s1_info_lbl,s2_info_lbl,s3_info_lbl,s1_mates_lbl,s2_mates_lbl,s3_mates_lbl,s1_dret_lbl,s2_dret_lbl,s3_dret_lbl), axis=0)
+    
+    columns_map = dict(zip(idAssig,descAssig))
+    return columns_map
+
+
+#===============================================================================
+# Sacar el dataframe correspondiente al id enseñanza indicado.
+# Realizar un reemplazamiento, una confirmacion y una eliminacion
+# 
+# Retorna el dataframe de cualificaciones procesadas
+#===============================================================================
+def getQual2process(id_ens, data):
+    asigMap = map_asig()
+    qual2process = data[id_ens]
+    
+    qual2process['id_assig'].replace(asigMap,inplace=True) #Cambiar los ids de asignaturas por las etiquetas
+    qual2process['id_assig'] = qual2process['id_assig'][qual2process['id_assig'].isin(asigMap.values())]
+    qual2process.dropna(axis = 0, how='any',subset=['id_assig'], inplace=True)
+    
+    return qual2process
+
+
+#===============================================================================
+# Retorna la lista de etiquetas de asignaturas del segundo año correspondiente al id enseñanza indicado.
+#===============================================================================
+def getLabel2(id_ens):
+    if id_ens == "G1042":
+        return s2_mates_lbl
+    elif id_ens == "G1055":
+        return s2_dret_lbl
+    elif id_ens == "1077":
+        return s2_info_lbl
+    else: 
+        return None

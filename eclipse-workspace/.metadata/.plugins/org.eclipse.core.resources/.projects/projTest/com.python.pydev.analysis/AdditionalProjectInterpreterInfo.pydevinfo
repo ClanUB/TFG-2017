@@ -1,0 +1,69 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\projTest\com.python.pydev.analysis\v2_indexcache
+evaluation|1510354343432031000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\evaluation.py
+evaluation2|1508716429844582000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\evaluation2.py
+visualization|1508718741005158000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\visualization.py
+testRecom|1510354216124899000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\testRecom.py
+loadData|1508335699433141000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\loadData.py
+main|1510576760044923000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\main.py
+utilFunc|1510576561175949000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\utilFunc.py
+recommenderItemBL|1510176061535425000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\recommenderItemBL.py
+recommenderUserM|1510351550487983000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\projTest\recommenderUserM.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+3=evaluation2
+4=visualization
+13=RecommenderUserM
+16=testRecom.__init__
+11=RecommenderUserM.fit
+17=RecommenderItemBL.__init__
+15=RecommenderItemBL.predict
+5=loadData
+6=main
+14=RecommenderItemBL
+7=recommenderItemBL
+8=recommenderUserM
+18=RecommenderUserM.__init__
+2=evaluation
+12=RecommenderItemBL.fit
+9=testRecom
+1=utilFunc
+10=testRecom.fit
+-- END DICTIONARY
+-- START TREE 1
+12
+cro|2|crossValidationSM!10@crossValidation!10@
+eva|2|evalRecommender!18@evalRecommender2!26@
+get|2|getMarks!10@getSimilarity!10@
+knn|1|KNN!10@
+len|1|len_kf!35@
+loa|1|loadData!42@
+mae|1|MAE!10@
+mai|1|main!50@
+plo|1|plotScatter!34@
+rec|2|RecommenderItemBL!57@RecommenderUserM!65@
+sta|1|StandardDeviation!10@
+tes|1|testRecom!73@
+-- END TREE
+-- START TREE 2
+17
+_X|3|_X!10&75@_X!11&67@_X!12&59@
+__i|3|__init__!9&74@__init__!13&66@__init__!14&58@
+__s|3|__str__!9&74@__str__!14&58@__str__!13&66@
+_bi|2|_bi_first!12&59@_bi_second!12&59@
+_bu|1|_bu_first!15&59@
+_mu|2|_mu_first!12&59@_mu_second!12&59@
+_nn|1|_nn!12&59@
+_re|1|_recomender!9&74@
+_y|3|_y!12&59@_y!11&67@_y!10&75@
+alp|3|alpha!16&75@alpha!17&59@alpha!18&67@
+com|2|compute_bu!14&58@compute_bi!14&58@
+fit|3|fit!13&66@fit!14&58@fit!9&74@
+k|3|k!16&75@k!17&59@k!18&67@
+lab|3|label!17&59@label!18&67@label!16&75@
+pre|3|predict!13&66@predict!14&58@predict!9&74@
+rec|2|recommend!13&66@recommend!14&58@
+sco|3|score!13&66@score!9&74@score!14&58@
+-- END TREE

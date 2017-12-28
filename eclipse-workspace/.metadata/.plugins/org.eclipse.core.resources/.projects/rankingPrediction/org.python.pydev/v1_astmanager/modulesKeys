@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+LoadData|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\LoadData.py
+Main|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\Main.py
+RecMvRepl|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\RecMvRepl.py
+RecUserBased|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\RecUserBased.py
+UtilFunctions|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\rankingPrediction\UtilFunctions.py

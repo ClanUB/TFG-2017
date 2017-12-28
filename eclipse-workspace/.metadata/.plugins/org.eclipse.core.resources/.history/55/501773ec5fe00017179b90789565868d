@@ -1,0 +1,112 @@
+import operator
+from sklearn import metrics
+from RecMvRepl import RecMvRepl
+import pandas as pd
+#===============================================================================
+# Convertir los valores de un dataframe al ranking ordinal de 1 a 10 en filas
+# 
+# df_qual(pd.DataFrame): dataframe a convertir
+#===============================================================================
+def score2ranking(data, reverse=True):
+    data_copy = data.copy()
+    multi_samples = type(data_copy) == type(pd.DataFrame())
+            
+    if multi_samples: 
+        rank_list = list(range(1,11))
+        for index in range(len(data_copy)):
+            qual_i = data_copy.iloc[index]
+            sorted_i = sorted(dict(qual_i).items(), key=operator.itemgetter(1), reverse=reverse)
+            
+            sorted_asig_names = [x[0] for x in sorted_i]
+            
+            for i in range(len(qual_i)):
+                asig_name = sorted_asig_names[i]
+                rank = rank_list[i]
+                qual_i[asig_name] = rank
+                
+        data_copy[data_copy.columns] = data_copy[data_copy.columns].astype(int)
+
+    else:
+        rank_list = list(range(1, len(data)+1))
+        qual_i = data_copy
+        sorted_i = sorted(dict(qual_i).items(), key=operator.itemgetter(1), reverse=reverse)
+        sorted_asig_names = [x[0] for x in sorted_i]
+        
+        for i in range(len(qual_i)):
+            asig_name = sorted_asig_names[i]
+            rank = rank_list[i]
+            qual_i[asig_name] = rank
+        
+        data_copy = qual_i.astype(int)
+            
+    return data_copy
+    
+    
+def compute_accuracy(y_pred, y_test): 
+    multi_samples = type(y_pred) == type(pd.DataFrame())
+            
+    if multi_samples:      
+        df_diff = abs(y_pred - y_test)
+        n_match = (df_diff==0).sum().sum()
+        length = y_pred.shape[0] * y_pred.shape[1]
+        accuracy = n_match / float(length)
+        return accuracy
+    
+    else:
+        diff = abs(y_pred-y_test)
+        n_match = (diff==0).sum()
+        pair = (n_match, len(y_pred))
+        return pair
+
+
+def compute_accMargin(y_pred, y_test):
+    multi_samples = type(y_pred) == type(pd.DataFrame())
+            
+    if multi_samples:
+        df_diff = abs(y_pred - y_test)
+        n_match = (df_diff<=2).sum().sum()
+        length = y_pred.shape[0] * y_pred.shape[1]
+        accuracy = n_match / float(length)
+        return accuracy
+    
+    else:
+        diff = abs(y_pred-y_test)
+        n_match = (diff<=2).sum()
+        pair = (n_match, len(y_pred))
+        return pair
+    
+
+def compute_mae(y_pred, y_test):
+    multi_samples = type(y_pred) == type(pd.DataFrame())
+            
+    if multi_samples:        
+        df_diff = abs(y_pred-y_test)
+        error = df_diff.sum().sum()
+        length = df_diff.shape[0] * df_diff.shape[1]
+        mae = error / float(length)
+        return mae
+    
+    else:
+        diff = abs(y_pred-y_test)
+        error = diff.sum()
+        pair = (error, len(y_pred))
+        return pair
+
+
+def fill_mv(df):
+    mv_positions = []
+    for i in range(len(df)):
+        row = df.iloc[i]
+        num_mv = row.isnull().sum()
+        if (num_mv>0):
+            mv_positions.append(i)
+    
+    if (len(mv_positions)>0):
+        mv_index = df.index[mv_positions]
+        mv_rows = df.loc[mv_index]
+        training_rows = df.drop(mv_index)
+        
+        rmr = RecMvRepl()
+        rmr.fit(training_rows)
+        rmr.predict(mv_rows) #mv_rows is being updated
+        df.loc[mv_index] = mv_rows

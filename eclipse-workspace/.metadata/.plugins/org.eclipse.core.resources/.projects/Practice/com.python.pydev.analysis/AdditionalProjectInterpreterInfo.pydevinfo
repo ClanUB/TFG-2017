@@ -1,0 +1,49 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\Practice\com.python.pydev.analysis\v2_indexcache
+test|1513012144068337000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\Practice\test.py
+preknn_RecUserBased|1513011580239117000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\Practice\preknn_RecUserBased.py
+preknn_RecMvRepl|1513013388386000000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\Practice\preknn_RecMvRepl.py
+randomForest|1513898062756511000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\Practice\randomForest.py
+binClassifier|1513114094788277000|C:\Users\Orquidea\Documents\GitHub\TFG-2017\eclipse-workspace\Practice\binClassifier.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+6=RecMvRepl.predict
+2=test
+8=RecMvRepl.fit
+7=RecMvRepl.__init__
+4=preknn_RecMvRepl
+3=randomForest
+1=binClassifier
+5=RecMvRepl
+-- END DICTIONARY
+-- START TREE 1
+8
+bc_|2|bc_binary_prediction!10@bc_qual_prediction!10@
+bin|1|binary_score!10@
+com|1|compute_accuracy!18@
+flo|1|float_formatter!27@
+mai|1|main!18@
+qua|1|qual2binary!10@
+rec|1|RecMvRepl!33@
+rf_|2|rf_qual_prediction!26@rf_rank_prediction!26@
+-- END TREE
+-- START TREE 2
+15
+__i|1|__init__!5&34@
+dic|1|dict_knn!6&35@
+fil|2|filename!7&35@fill_mv!5&34@
+fit|1|fit!5&34@
+kn|1|kn!7&35@
+knn|1|KNN!5&34@
+loa|1|load_knn!7&35@
+mul|1|multi_samples!6&35@
+nam|1|name!7&35@
+pre|1|predict!5&34@
+rea|1|read_knn!5&34@
+rec|1|recommend!5&34@
+tes|1|testing_set!6&35@
+tra|1|training_set!8&35@
+wri|1|write_knn!5&34@
+-- END TREE

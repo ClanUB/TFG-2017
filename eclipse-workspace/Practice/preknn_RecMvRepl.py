@@ -1,0 +1,131 @@
+import pandas as pd
+import numpy as np
+from scipy.stats import pearsonr
+from operator import itemgetter
+import json
+import os
+from time import time
+
+class RecMvRepl(): 
+    def __init__(self, name="Missing value replacement RecUserBased", kn=5, filename=""):
+        self.name = name
+        self.kn = kn
+        self.filename = filename
+        self.load_knn = os.path.exists(self.filename)
+        
+        
+    def fit(self, training_set):
+        self.training_set = training_set
+            
+    
+    def KNN(self, student):
+        neighbours = {}
+        n = len(self.training_set)
+        
+        for i in range(n):
+            stuCompare = self.training_set.iloc[i]
+            
+            df_concat = pd.concat([student, stuCompare], axis=1)
+            df_concat.dropna(how="any", inplace=True)
+            
+            if (len(df_concat)>=5):
+                s1 = df_concat[df_concat.columns[0]]
+                s2 = df_concat[df_concat.columns[1]]
+                
+                p = pearsonr(s1, s2)[0]
+                if (not np.isnan(p)):
+                    neighbours[i] = round(float(p), 4)
+        
+        if (len(neighbours)<self.kn):
+            kn = len(neighbours)
+        else:
+            kn = self.kn
+        list_knn = sorted(neighbours.items(), key=itemgetter(1), reverse=True)[:kn]
+        return list_knn
+    
+    
+    def recommend(self, student):
+        subjects = student.index
+        
+        for subject in subjects:
+            score = student[subject]
+            if (np.isnan(score)):
+                sum_p = 0
+                sum_weighing = 0
+                
+                list_knn = self.dict_knn[student.name]
+                for i, p in list_knn:
+                    sim_stu = self.training_set.iloc[i]
+                    sum_p += p
+                    sum_weighing += p*sim_stu[subject]
+                    
+                pred_score = sum_weighing / sum_p
+                student[subject] = pred_score
+                
+                
+    def predict(self, testing_set):
+        self.testing_set = testing_set
+        self.multi_samples = type(self.testing_set) == type(pd.DataFrame())
+        
+        if self.load_knn:
+            self.dict_knn = self.read_knn()
+        
+        else:
+            self.dict_knn = {}
+            if self.multi_samples:
+                t0 = time()
+                for i in range(len(self.testing_set)):
+                    student = self.testing_set.iloc[i]
+                    list_knn = self.KNN(student)
+                    
+                    studentId = student.name
+                    self.dict_knn[studentId] = list_knn
+                t_used = time()-t0
+                print("time used for the computing KNN of "+self.name+":", t_used)
+            
+            else:
+                self.dict_knn[student.name] = self.KNN(student)
+            
+            self.write_knn()
+            
+            
+        if self.multi_samples:        
+            for i in range(len(self.testing_set)):
+                student = self.testing_set.iloc[i]
+                self.recommend(student)
+        
+        else:
+            student = self.testing_set
+            self.recommend(student)  
+            
+
+    def fill_mv(self, df):
+        mv_positions = []
+        for i in range(len(df)):
+            row = df.iloc[i]
+            num_mv = row.isnull().sum()
+            if (num_mv>0):
+                mv_positions.append(i)
+        
+        if (len(mv_positions)>0):
+            mv_rows = df.iloc[mv_positions]
+            mv_index = df.index[mv_positions]
+            training_rows = df.drop(mv_index)
+            
+            self.fit(training_rows)
+            self.predict(mv_rows)
+            df.iloc[mv_positions] = mv_rows
+            
+    
+    def write_knn(self):
+        dic = {str(k): v for k,v in self.dict_knn.items()}
+        fout = open(self.filename, "w")
+        fout.write(json.dumps(dic))
+        
+    
+    def read_knn(self):
+        fin = open(self.filename, "r")
+        text = fin.read()
+        dic = eval(text)
+        dic = {int(k): v for k,v in dic.items()}
+        return dic

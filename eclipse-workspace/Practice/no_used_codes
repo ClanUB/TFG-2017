@@ -1,0 +1,288 @@
+#===========================================================================
+    # Obtener los k vecinos con mayor puntuacion de similitud, haciendo recorrido en la muestra entrenada.
+    # student: Series, el alumno a testear
+    # 
+    # knn_list: List, lista de k vecinos con mayor puntuacion de similitud
+    #===========================================================================
+     
+    def KNN(self, student):
+        neighbours = {} #Todos los vecinos con su puntuacion de similitud
+        n = len(self.X_train)
+         
+        for i in range(n):
+            print (i)
+            neighbours[i] = self.getSimilarity(student, self.X_train.iloc[i], n)
+             
+        knn_list = sorted(neighbours.items(), key=itemgetter(1), reverse=True)[:self.kn]
+        return knn_list
+     
+     
+    #===========================================================================
+    # Calcular la similitud pearson de los dos alumnos
+    # student: Series, alumno a testear
+    # stuCompare: Series, alumno a comparar
+    # n: longitud de X_train, o sea, total de alumnos a comparar
+    # 
+    # p: float, el valor de similitud pearson
+    #===========================================================================
+    def getSimilarity(self, student, stuCompare, n):
+        df_conc = pd.concat([student, stuCompare], axis=1).dropna(how="any").T
+        p = pearsonr(df_conc.iloc[0], df_conc.iloc[1])[0]
+         
+        if not np.isnan(p):
+            p *= (min(len(student), n)/float(n))
+             
+        return p
+
+        
+main.py--------------------------------
+#qualPredict
+def predict(X, y, estimator):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=33)
+    estimator.fit(X_train, y_train)
+    
+    t0 = time()
+    y_pred = estimator.predict(X_test)
+    tf = time() - t0
+    
+    index_greater10 = np.where(y_pred>10)
+    for i in range(len(index_greater10[0])):
+        row = index_greater10[0][i]
+        column = index_greater10[1][i]
+        y_pred.iloc[row][y_pred.columns[column]] = 10.0
+    
+    return y_pred
+    
+#predict(rec, X_copy, y_copy)
+#===========================================================================
+# cv_score = cross_val_score(rec, X_copy, y_copy, cv=5)
+# print(cv_score)
+#===========================================================================
+    
+    
+#Evaluation with coeficients
+def predict(X, y, estimator):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=33)
+    estimator.fit(X_train, y_train)
+    
+    for i in range(10):
+        print("Margin=", i)
+        estimator.accMargin = i
+        
+        for j in range(1, 10):
+            print ("kn=", j)
+            estimator.kn = j
+            t0 = time()
+            y_pred = estimator.predict(X_test)
+            tf = time() - t0
+            
+            df_error = abs(y_pred-y_test)
+            error = df_error.sum().sum() / float(len(df_error))
+            print ("errors",error)
+            
+    return y_pred
+    
+
+recommender.py-------------------------
+#===========================================================================
+    # Predecir la nota de las asignaturas para varios alumnos o un solo alumno
+    # X_test: DataFrame(varios alumnos) or Series(un solo alumno) 
+    # 
+    # df_pred: resultado de predicciones tipo DataFrame or
+    # pred: resultado de prediccion unitaria tipo Series
+    #===========================================================================
+    def qualPredict(self, X_test):
+        if type(X_test) == type(pd.DataFrame()):
+            predictions = []
+            
+            for studentId in X_test.index:
+                stud_row = X_test.loc[studentId]
+                pred = self.recommend(stud_row) #Predecir via recomendacion
+                
+                predictions.append(pred)
+            
+            df_pred = np.round(pd.DataFrame(predictions, index=X_test.index), decimals=1)
+            return df_pred    
+        
+        else:
+            pred = self.recommend(X_test)
+            return pred
+    
+    
+    #===========================================================================
+    # Hacer la estimacion de la cualificacion de las diez asignaturas del segundo anio del alumno que se testea
+    # student: Series, el alumno a testear
+    # 
+    # prediction: Series, el resultado de estimacion
+    #===========================================================================
+    def qualRecommend(self, student):
+        y_subjects = self.y_train.columns
+        knn_list = self.KNN(student)
+        
+        prediction = pd.Series([0]*len(y_subjects), index=y_subjects)
+        
+        #Estimar la cualificacion para las diez asignaturas del segundo anio del alumno que se testea.
+        for subject in y_subjects:
+            total_alpha = 0
+            
+            #Estimar la cualificacion de la asignatura ponderando los k vecinos mas cercanos
+            for i, p_score in knn_list:
+                y_sim_stu = self.y_train.iloc[i]
+                
+                nanSubj = np.isnan(y_sim_stu[subject])
+                zeroSubj = y_sim_stu[subject]==0
+                compute_cond = not(nanSubj) and not(zeroSubj) and p_score>0
+                if compute_cond:
+                    score = (p_score**self.alpha)*(y_sim_stu[subject]-y_sim_stu.mean())/float(y_sim_stu.std())
+                    prediction.loc[subject] += score
+                    
+                    total_alpha += abs(p_score**self.alpha)
+            
+            prediction.loc[subject] *= student.std()
+            prediction.loc[subject] /= float(total_alpha)
+            prediction.loc[subject] += student.mean()
+        
+        return prediction
+    
+    
+    #===========================================================================
+    # Obtener los k vecinos con mayor puntuacion de similitud, haciendo recorrido en la muestra entrenada.
+    # student: Series, el alumno a testear
+    # 
+    # knn_list: List, lista de k vecinos con mayor puntuacion de similitud
+    #===========================================================================
+    def KNN(self, student):
+        neighbours = {}
+        n = len(self.X_train)
+         
+        for i in range(n):
+            stuCompare = self.X_train.iloc[i]
+            new_df = pd.concat([student, stuCompare], axis = 1).dropna(how = "any").T
+            s1, s2 = new_df.iloc[0], new_df.iloc[1]
+             
+            neighbours[i] = pearsonr(s1,s2)[0]
+            if not np.isnan(neighbours[i]):
+                neighbours[i] *= (min(len(s1),n)/float(n))
+                
+        list_knn = sorted(neighbours.items(), key=itemgetter(1), reverse = True)[:self.kn]
+        return list_knn
+        
+        
+    #===========================================================================
+    # #===========================================================================
+    # # Hacer la estimacion del ranking de las diez asignaturas del segundo anio del alumno que se testea
+    # # student: Series, el alumno a testear
+    # # 
+    # # prediction: Series, el resultado de estimacion
+    # #===========================================================================
+    # def recommend(self, student):
+    #     y_subjects = self.y_train.columns #class labels
+    #     list_knn = self.KNN(student)
+    #     list_accs = self.getListAccs(student, list_knn)
+    #     
+    #     prediction = pd.Series([0]*len(y_subjects), index=y_subjects) #Inicializacion del resultado
+    #     median_list = []
+    #     
+    #     for subject in y_subjects:
+    #         weighted_ranks = []
+    #         #Estimar la puntuacion del ranking de la asignatura ponderando los k vecinos mas cercanos
+    #         for i, acc_score in list_accs:
+    #             sim_stu_y = self.y_train.iloc[i]
+    #             rank = sim_stu_y[subject]
+    #             if (acc_score==0): #Evitar que la lista de weighted_ranks sea vacia
+    #                 acc_score = 1
+    #             weighted_ranks += [rank]*acc_score #Ponderar el ranking
+    #         
+    #         median = statistics.median(weighted_ranks)
+    #         median_list.append((subject, median))
+    #         
+    #     rank_list = range(1, len(y_subjects)+1)
+    #     sorted_medians = sorted(median_list, key=itemgetter(1), reverse=False)
+    #     
+    #     for i in range(len(y_subjects)): #Determinar el ranking segun el valor de la mediana obtenida de cada asignatura.
+    #         subject = sorted_medians[i][0]
+    #         rank = rank_list[i]
+    #         prediction[subject] = rank
+    #     
+    #     return prediction
+    #===========================================================================
+    
+    
+    #===============================================================================
+    #     #===========================================================================
+    #     # Obtener los k vecinos con mayor puntuacion de similitud, haciendo recorrido en la muestra entrenada.
+    #     # student: Series, el alumno a testear
+    #     # 
+    #     # list_accs: List, lista de k vecinos con mayor puntuacion de similitud
+    #     #===========================================================================
+    #     def KNN(self, student):
+    #         neighbours = {}
+    #         n = len(self.X_train)
+    #          
+    #         for i in range(n):
+    #             stuCompare = self.X_train.iloc[i]
+    # 
+    #             mae = mean_absolute_error(student, stuCompare) #Medida de similitud, 0.0 es la mejor puntuacion
+    #             neighbours[i] = mae
+    #                 
+    #         list_knn = sorted(neighbours.items(), key=itemgetter(1), reverse = False)[:self.kn]
+    #         list_knn =[x[0] for x in list_knn]
+    #         return list_knn
+    #===============================================================================
+
+    #===========================================================================
+    # #===========================================================================
+    # # Calcular la certeza de dos vectores, si la diferencia esta dentro del margen, es un acierto
+    # # v1: array-like
+    # # v2: array-like
+    # # 
+    # # acc: int, puntuacion de certeza
+    # #===========================================================================
+    # def acc_score_margin(self, v1, v2):
+    #     diff = abs(v1 - v2)
+    #     acc = (diff<=self.accMargin).sum()
+    #     
+    #     return acc
+    #===========================================================================
+    
+    
+    #===========================================================================
+    # def getListAccs(self, student, list_knn):
+    #     list_accs = []
+    #     for j in range(self.kn):
+    #         knn_j = self.X_train.iloc[list_knn[j]]
+    #         acc = self.acc_score_margin(student, knn_j)
+    #         
+    #         acc_tuple = (list_knn[j], acc)
+    #         list_accs.append(acc_tuple)
+    #         
+    #     return list_accs
+    #===========================================================================
+        
+#utilFunctions.py
+#===============================================================================
+# Convertir los valores de un dataframe al ranking ordinal de 1 a 10 en filas
+# 
+# df_qual(pd.DataFrame): dataframe a convertir
+#===============================================================================
+def qual2ranking(df_qual):
+    rank_list = list(range(1,11))
+    
+    for index in range(len(df_qual)):
+        qual_i = df_qual.iloc[index]
+        sorted_i = sorted(dict(qual_i).items(), key=operator.itemgetter(1), reverse=True)
+        
+        sorted_asig_names = [x[0] for x in sorted_i]
+        sorted_quals = [x[1] for x in sorted_i]
+        
+        for i in range(len(qual_i)):
+            asig_name = sorted_asig_names[i]
+            qual = sorted_quals[i]
+            
+            if (not np.isnan(qual)):
+                rank = rank_list[i]
+                qual_i[asig_name] = rank
+            
+    df_qual[df_qual.columns] = df_qual[df_qual.columns].astype(int) 
+
+    
